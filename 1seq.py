@@ -15,22 +15,22 @@
 l_numbers = []
 
 while True:
-    answer = input('Enter the number of items: ')
+    answer = input('Введите количество элементов: ')
     if answer.isdigit(): break
 
 items_num = int(answer)
-print('answer =', items_num)
+#print('answer =', items_num)
 
 for i in range(1, items_num + 1):
     while True:
-        s_input = 'Attempt=' + str(i) + ' Enter any number: '
+        s_input = 'Введите ' + str(i) + ' элемент: '
         s_num = input(s_input)
         if s_num.isdigit(): break
     i_num = int(s_num)
-    print('i_num=', i_num)
+    #print('i_num=', i_num)
     l_numbers.append(i_num)
 
 
-print(type(l_numbers), l_numbers)
+#print(type(l_numbers), l_numbers)
 l_numbers.sort()
-print('Sorted list is: ', l_numbers)
+print(l_numbers)
