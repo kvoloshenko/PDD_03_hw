@@ -12,7 +12,7 @@
 
 """
 answer = input('Enter multiple numbers separated by comma, semicolon or slash: ')
-print(answer)
+#print(answer)
 if ',' in answer:
     l_strings = answer.split(',')
 elif ';' in answer:
@@ -20,13 +20,11 @@ elif ';' in answer:
 elif '/' in answer:
     l_strings = answer.split('/')
 
-print(l_strings)
+#print(l_strings)
 l_digits = []
 for s in l_strings:
-    l_digits.append(int(s))
+    if l_strings.count(s) == 1:
+        l_digits.append(int(s))
 
 print(l_digits)
-s_digits = set(l_digits)
-print(type(s_digits), s_digits)
-l_digits_new = list(s_digits)
-print(type(l_digits_new), l_digits_new)
+

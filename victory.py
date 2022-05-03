@@ -49,7 +49,7 @@ persons = [{'birthday': '03.01.1956', 'name': 'Мел Гибсон'},
 # print(type(persons),persons)
 
 number_of_unique_attempts = 0
-while (number_of_unique_attempts != 5):
+while (number_of_unique_attempts != 5): # пока не получим 5 разных случайных чисел
     random_integer_array = np.random.randint(0, 10, 5)
     # print(random_integer_array)
     s_digits = set(random_integer_array)
@@ -62,7 +62,7 @@ for i in random_integer_array:
     # print(i)
     # print(persons[i]['birthday'])
     # print(persons[i]['name'])
-    s = 'Попытка №' + str(n) + ': Когда родился/родилась ' + persons[i]['name'] + '? введите dd.mm.yyyy'
+    s = 'Попытка №' + str(n) + ': Введите дату рождения ' + persons[i]['name'] + 'в формате dd.mm.yyyy: '
     n += 1
     answer = input(s)
     if persons[i]['birthday'] == answer:
